@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #343434;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Play', sans-serif;
+
+    
+}
+/* header section */
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10%;
+    font-family: 'audiowide', sans-serif;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+    justify-content: space-between;
+    align-items:right;
+    z-index: 100;
+
+}
+
+/* hardstone logo */
+.logo{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #ededed;
+    text-decoration: none;
+
+}
+
+.logo:hover{
+    color:aquamarine;
+    cursor: pointer;
+}
+/* navigation section */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 30px;
+
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: aquamarine;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.menu-icon{
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+#menu-toggle{
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + .navbar{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 0;
+    background-color: transparent;
+    text-align: center;
+}
+
+.navbar a {
+    margin: 20px;
+    font-size: 20px;
+}
+
+.image img {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+    margin-bottom: 50px;
+}
+
+/* Section styles */
+section {
+    padding: 20px 10%;
+    background: #a5a5a8;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.about h2,
+.track h2 {
+    margin-bottom: 10px;
+    font-family: 'Audiowide', sans-serif;
+}
+
+
+.about p {
+    line-height: 1.6;
+}
+
+.track h3 {
+    margin-top: 20px;
+    font-family: 'Audiowide', sans-serif;
+}
+
+.track ul {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.track ul li {
+    margin-bottom: 5px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+#music {
+    background-color:#a5a5a8; /* Dark background for contrast */
+    padding: 40px 20px; /* Spacious padding */
+    text-align: center; /* Center the text */
+    color: #fff; /* White text */
+    font-family: 'Audiowide', sans-serif;
+    border-radius: 12px; /* Smooth corner for the section */
+
+}
+
+#music h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff; 
+    text-align: center; /* Ensure h2 is centered */
+}
+
+.music {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between frames */
+}
+
+.music iframe {
+    border-radius: 12px; /* Rounded corners for iframes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.music iframe:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Footer section */
+
+.footer {
+    background-color: #a5a5a8; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center; /* Center align the text */
+    padding: 20px 0; /* Padding top and bottom */
+    position: relative;
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Smaller font size */
+}
+
+.footer-icons {
+    margin-top: 10px; /* Space between text and icons */
+}
+
+.footer-icons a {
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-icons i {
+    vertical-align: middle; /* Align icons with text */
+    font-size: 30px; /* Smaller font size */
+    margin-right: 5px; /* Space between icons and text */
+    cursor: pointer; /* Change cursor to pointer */
+    color: #fff;
+
+}
+
+.footer-icons i:hover {
+    color:aquamarine; /* Hover color change */
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menu-toggle:checked + .menu-icon + .navbar {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+    .music iframe {
+        flex: 1 1 100%; /* Stacks the iframes in a column */
+        min-width: 100%; /* Ensures the iframes take full width */
+    }
+}
