@@ -16,7 +16,9 @@ body{
 }
 /* header section */
 .header{
-    position: relative;
+    position: sticky;
+    background: #343434;
+    display: flex;
     top: 0;
     left: 0;
     width: 100%;
@@ -34,6 +36,8 @@ body{
 
 /* hardstone logo */
 .logo{
+    position: relative;
+    cursor: pointer;
     font-size: 30px;
     font-weight: bolder;
     color: #ededed;
